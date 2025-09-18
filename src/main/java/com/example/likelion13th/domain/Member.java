@@ -54,4 +54,13 @@ public class Member {
         this.isAdmin = isAdmin;
         this.deposit = deposit;
     }
+
+    public boolean isSeller() {
+        return Role.SELLER.equals(this.role);
+    }
+
+    public boolean isBuyer()
+    {
+        return Role.BUYER.equals(this.role);
+    }
 }
