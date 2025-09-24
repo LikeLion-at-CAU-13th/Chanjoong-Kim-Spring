@@ -8,7 +8,9 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 @Entity
 @Getter
@@ -33,4 +35,12 @@ public class Orders extends BaseTimeEntity {
 
     @OneToOne(mappedBy = "orders", cascade = CascadeType.ALL)
     private Coupon coupon;
+
+    @OneToMany(mappedBy = "orders", cascade = CascadeType.ALL)
+    private Set<ShippingAddress> shippingAddresses = new HashSet<>();
+
+    public void update(DeliverStatus deliverStatus)
+    {
+        this.deliverStatus = deliverStatus;
+    }
 }
