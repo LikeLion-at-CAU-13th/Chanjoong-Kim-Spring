@@ -18,6 +18,9 @@ public class Member {
     private Long id;
 
     private String name;
+    
+    private String password; // 25주차 실습: 비밀 번호 필드 추가
+
     // 18주차 과제: 나이 정보
     private Integer age;
 
@@ -43,9 +46,10 @@ public class Member {
     }
 
     @Builder
-    public Member(String name, Integer age,String address, String email, String phoneNumber,
+    public Member(String name, String password, Integer age,String address, String email, String phoneNumber,
                   Role role, Boolean isAdmin, Integer deposit) {
         this.name = name;
+        this.password = password;
         this.age = age;
         this.address = address;
         this.email = email;
