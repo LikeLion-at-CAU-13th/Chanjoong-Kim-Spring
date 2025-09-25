@@ -24,7 +24,7 @@ public class MemberService
         if(memberRepository.existsByName(joinRequestDto.getName()))
         {
             // 예외 처리 필요
-            return;
+            throw new IllegalStateException("이미 존재하는 이름입니다: " + joinRequestDto.getName());
         }
 
         // 유저 객체 생성
