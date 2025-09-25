@@ -13,5 +13,7 @@ public interface MemberRepository extends JpaRepository<Member, Long>
     Optional<Member> findByEmail(String email);
     Page<Member> findByAgeGreaterThanEqualOrderByNameAsc(Integer age, Pageable pageable);
     Page<Member> findByNameStartingWithOrderByNameAsc(String prefix, Pageable pageable);
+    // 이름 중복 검사 쿼리
+    boolean existsByName(String name);
 }
 //Spring Data JPA가 자동으로 인식해서 내부적으로 JPQL 쿼리를 생성해준다!
