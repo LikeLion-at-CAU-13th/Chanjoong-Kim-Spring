@@ -1,4 +1,4 @@
-package jwt;
+package com.example.likelion13th.jwt;
 
 public enum JwtValidationType {
     VALID_JWT,

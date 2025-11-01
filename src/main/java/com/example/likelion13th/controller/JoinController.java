@@ -5,7 +5,7 @@ import com.example.likelion13th.config.PrincipalHandler;
 import com.example.likelion13th.domain.Member;
 import com.example.likelion13th.dto.request.JoinRequestDto;
 import com.example.likelion13th.dto.response.TokenResponseDto;
-import jwt.JwtTokenProvider;
+import com.example.likelion13th.jwt.JwtTokenProvider;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;

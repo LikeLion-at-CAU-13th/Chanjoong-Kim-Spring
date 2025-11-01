@@ -1,4 +1,4 @@
-package jwt;
+package com.example.likelion13th.jwt;
 
 import com.example.likelion13th.Service.CustomUserDetailsService;
 import io.jsonwebtoken.*;

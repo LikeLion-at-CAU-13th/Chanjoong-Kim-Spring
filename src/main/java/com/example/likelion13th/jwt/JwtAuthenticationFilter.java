@@ -1,4 +1,4 @@
-package jwt;
+package com.example.likelion13th.jwt;
 
 import com.example.likelion13th.config.MemberAuthentication;
 import jakarta.servlet.FilterChain;
@@ -15,7 +15,7 @@ import org.springframework.web.filter.OncePerRequestFilter;
 
 import java.io.IOException;
 
-import static jwt.JwtValidationType.VALID_JWT;
+import static com.example.likelion13th.jwt.JwtValidationType.VALID_JWT;
 
 @Component
 @Slf4j

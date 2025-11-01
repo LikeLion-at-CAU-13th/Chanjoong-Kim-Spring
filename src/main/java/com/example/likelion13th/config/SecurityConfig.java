@@ -2,11 +2,12 @@ package com.example.likelion13th.config;
 
 import com.example.likelion13th.Service.CustomOAuth2UserService;
 import com.example.likelion13th.Service.CustomUserDetailsService;
-import jwt.JwtAuthenticationFilter;
+import jakarta.servlet.Filter;
+import com.example.likelion13th.jwt.JwtAuthenticationFilter;
+import com.example.likelion13th.jwt.JwtTokenProvider;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
@@ -71,6 +72,4 @@ public class SecurityConfig {
             return configuration;
         });
     }
-
-
 }
